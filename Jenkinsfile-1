@@ -1,11 +1,11 @@
 pipeline {
   agent {
-    bat 'docker --version'
     docker { image 'node:16-alpine' }
   }
   stages {
     stage('Test') {
       steps {
+        bat 'docker --version'
         bat 'node --version'
       }
     }
